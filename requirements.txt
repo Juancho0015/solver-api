@@ -6,7 +6,6 @@ scipy
 pulp
 numpy
 pandas
-base64
 sympy
 networkx
 openpyxl
