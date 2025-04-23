@@ -2,3 +2,8 @@ fastapi
 uvicorn
 matplotlib
 pillow
+scipy
+pulp
+numpy
+pandas
+base64
