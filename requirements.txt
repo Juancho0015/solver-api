@@ -11,4 +11,3 @@ networkx
 openpyxl
 python-multipart
 pdfplumber
-multiprocessing
