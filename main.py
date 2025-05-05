@@ -15,11 +15,11 @@ class CodeRequest(BaseModel):
 def execute_code(payload: CodeRequest):
     output = io.StringIO()
     result = {"stdout": "", "image_base64": None}
-    local_vars = {}
 
     try:
+        exec_globals = {"__builtins__": __builtins__, "plt": plt}
         with contextlib.redirect_stdout(output):
-            exec(payload.code, {"plt": plt}, local_vars)
+            exec(payload.code, exec_globals)
 
         result["stdout"] = output.getvalue()
 
